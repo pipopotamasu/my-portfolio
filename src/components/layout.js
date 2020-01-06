@@ -7,25 +7,13 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import LeftSidebar from './organisms/LeftSidebar';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import Header from './header';
-import './layout.css';
-
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
-
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <LeftSidebar />
       <div
         style={{
           margin: '0 auto',
@@ -35,10 +23,6 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with{' '}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
       </div>
     </>
   );
