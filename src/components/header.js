@@ -1,14 +1,15 @@
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { css } from "@emotion/core"
+
+const headerStyle = css`
+  background: rebeccapurple;
+  margin-bottom: 1.45rem;
+`
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem'
-    }}
-  >
+  <header css={headerStyle}>
     <div
       style={{
         margin: '0 auto',
