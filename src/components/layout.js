@@ -9,10 +9,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import LeftSidebar from './organisms/LeftSidebar';
 import { useStaticQuery, graphql } from 'gatsby';
+import { css } from "@emotion/core";
+
+const layoutCss = css`
+  display: flex;
+`
 
 const Layout = ({ children }) => {
   return (
-    <>
+    <div css={layoutCss}>
       <LeftSidebar />
       <div
         style={{
@@ -24,7 +29,7 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
       </div>
-    </>
+    </div>
   );
 };
 

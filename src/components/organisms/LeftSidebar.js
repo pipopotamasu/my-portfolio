@@ -6,10 +6,10 @@ const leftSidebarLayout = css`
   background-color: #242424;
 `
 
-const Header = () => (
+const LeftSidebar = () => (
   <div css={leftSidebarLayout}>
     hoge
   </div>
 );
 
-export default Header;
+export default LeftSidebar;
