@@ -15,7 +15,7 @@ const layoutCss = css`
   display: flex;
 `
 
-const Layout = ({ children }) => {
+const Layout: React.FC = ({ children }) => {
   return (
     <div css={layoutCss}>
       <LeftSidebar />
